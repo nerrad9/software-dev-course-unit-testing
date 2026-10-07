@@ -1,0 +1,24 @@
+{
+  "name": "software-dev-course-unit-testing",
+  "version": "1.0.0",
+  "description": "This is the README.md file! I, as the presenter, will fill it with content!",
+  "main": "main.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerrad9/software-dev-course-unit-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nerrad9/software-dev-course-unit-testing/issues"
+  },
+  "homepage": "https://github.com/nerrad9/software-dev-course-unit-testing#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
