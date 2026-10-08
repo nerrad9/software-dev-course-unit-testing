@@ -35,12 +35,12 @@ describe("calculateDiscount", function(){
 describe("filterProducts", function(){
     //positive
     test("Should filter products according to the callback function", function(){
-        expect(main.filterProducts(defaultProd, x=>x.price<=1)).toEqual({"apple":{"price":1}})
+        expect(main.filterProducts(defaultProd, ([name,info])=>info.price<=1)).toEqual({"apple":{"price":1}})
     })
     
     //negative
     test("Should do nothing if filtering a non object", function(){
-        expect(main.filterProducts("I am not an object!", x=>x.price<=1)).toEqual({})
+        expect(main.filterProducts("I am not an object!", ([name,info])=>info.price<=1)).toEqual({})
     })
     test("Should do nothing if invalid filter is given", function(){
         expect(main.filterProducts(defaultProd, "I am not an filter!")).toEqual({})
@@ -48,7 +48,7 @@ describe("filterProducts", function(){
 
     //edge
     test("Shouldn't crash if object is empty", function(){
-        expect(main.filterProducts({}, x=>x.price<=1)).toEqual({})
+        expect(main.filterProducts({}, ([name,info])=>info.price<=1)).toEqual({})
     })
     //*insert hypothetical edge case where theres just a ridiculous amount of products and it passes*
 })
